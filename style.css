@@ -41,7 +41,9 @@ footer {
     background-color: #000;
     color: white;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 80px;
+    padding: 70px 40px ;
+
     
     
 }
@@ -58,7 +60,7 @@ footer {
     flex-basis: 35%;  /* more info about flex basis */
 }
 .about-col-1 img{
-    width: 100%;
+    width: 80%;
     border-radius: 15px;
 }
 .about-col-2 {
@@ -67,6 +69,7 @@ footer {
 .about-col-2 p a{
    
     color: #006341; /* color code for algonquin college (https://www.algonquincollege.com/acmarketing/files/2024/03/AC-Visual-Identity-Standards-2024.pdf)*/
+    text-decoration: none;
 }
 .sub-title{
     font-size: 60px;
@@ -108,7 +111,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-   margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 .buttons #prev {
     margin-right: 40px ;
