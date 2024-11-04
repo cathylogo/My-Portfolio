@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catherine's Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resume.html">
+    <link rel="stylesheet" href="project.html">
+    <link rel="stylesheet" href="contact.html">
+</head>
+<body>
+    <header>
+        <h1> Catherine Logo</h1>
+
+        <nav>
+            <ul>
+                <li><a class="active" href="index.html">Home </a></li>
+                <li> <a href="resume.html">Resume</a></li>
+                <li> <a href="project.html">Project </a>  </li>
+                <li><a href="contact.html">Contact </a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- My Projects  -->
+    <div id="projects-section"> 
+        <div class="container">
+            <div class="row">
+                <!-- First Project: Baggage handler Software -->
+                <div class="about-col-1 project">
+                    <!-- Image associated with the project -->
+                    <img src="images/BaggageHandleSoftware.png" alt="Baggage Handle Software">
+                </div>
+                <div class="about-col-2 project">
+                    <!-- Project title and description -->
+                    <h3 class="sub-title">Baggage handler Software</h3>
+                    <p>I developed a Java program to verify baggage size and weight, streamlining check-in,
+                        enhancing efficiency, and ensuring compliance with airline regulations.</p>
+                </div>
+                <!-- Second Project: Donut Volume Estimator -->
+                <div class="about-col-1 project">
+                    <!-- Image associated with the project -->
+                    <img src="images/donut.png" alt="Donut">
+                </div>
+                <div class="about-col-2 project">
+                     <!-- Project title and description -->
+                    <h3 class="sub-title">Donut Volume Estimator</h3>
+                    <p>I developed a Java program to estimate the volume of a squashed donut. I have used <b>Java within Eclipse IDE.</b></p>
+                </div>
+                 <!-- Third Project: 10-Sided Dice Roll -->
+                <div class="about-col-1 project">
+                    <!-- Image associated with the project -->
+                    <img src="images/10-SidedRollDice.png" alt="10-Sided Dice Roll">
+                </div>
+                <div class="about-col-2 project">
+                    <!-- Project title and description -->
+                    <h3 class="sub-title">10-Sided Dice Roll</h3>
+                    <p>A Java program that simulates rolling a 10-sided die 10 times, records the results, and displays the largest value rolled. 
+                        It demonstrates the use of arrays, loops, and random number generation. I have used
+                        <b>Java within Eclipse IDE.</b></p>
+                </div>
+                <!-- Fourth project:My Health Data-->
+                <div class="about-col-1 project">
+                    <img src="images/Healthcare.jpg" alt="Heathcare">
+                </div>
+                <div class="about-col-2 project">
+                    <h3 class="sub-title">HealthCare</h3>
+                    <p>I developped a Java program that prompts the user to input patient health data, creates an instance of Health data,
+                         and displays the patient's health information. Ihave used
+                        <b>Java within Eclipse IDE.</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+
+    <!-- JavaScript code -->
+    <script>
+        // 1st to grab all projects, I will check 4 projects bug 
+        const projects = document.querySelectorAll('.project');
+        let currentPage = 0; //here first page is 0 , is setted to be zero , initially.
+
+        // Function (set of instructions )to display the current page of projects
+        function showPage() {
+            projects.forEach((project, index) => {
+                if (index >= currentPage * 4 && index < (currentPage + 1) * 4) { 
+                    //it will show first pages and on 0 page and then move to another page once you clicked on next, after verifying logical and (&&)
+
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+
+        // Initial display for the first 4 projects
+        showPage();
+
+        // Next button event listener
+        document.getElementById('next').addEventListener('click', () => {
+            currentPage = (currentPage + 1) % 2; // We only have two pages and once you click on 0 page , it will go no next one by incrementing by 1, and %2 means we have 2 pages only , when you devide, two pages you get 0 as reminder 
+            showPage();
+        });
+
+        // Previous button event listener
+        document.getElementById('prev').addEventListener('click', () => {
+            currentPage = (currentPage - 1 + 2) % 2; // We only have two pages, same with next but in reverse option (reason behind +2 , cause there is no valid -1 page)
+            showPage();
+        });
+    </script>
+  <footer>&copy; Catherine Logo| Algonquin College| october 11, 2024</footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* home page css  */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    background-color: #000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    margin-top: 35px;
+    
+    
+}
+#about{
+    padding: 80px 0;
+    color: #000;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;  /* more info about flex basis */
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2 {
+    width: 60%;
+}
+.about-col-2 p a{
+   
+    color: #006341; /* color code for algonquin college (https://www.algonquincollege.com/acmarketing/files/2024/03/AC-Visual-Identity-Standards-2024.pdf)*/
+}
+.sub-title{
+    font-size: 60px;
+    font-weight:600;
+    color:#000;
+
+
+}
+/* resume css */
+#contact-resume{
+    padding: 80px 0;
+    color: #000;
+    
+    
+}
+.contact-resume-1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+.contact-resume-1 p a{
+    text-decoration: none;
+    color: green;
+    margin-right: 20px;
+}
+.contact-resume-1 h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+.contact-resume-1 ul li {
+    list-style-type: none;
+
+}
+/* Projects */
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-bottom: 10px;
+}
+.buttons #prev {
+    margin-right: 40px ;
+    color: green;
+    width: 70px;
+}
+.buttons #next {
+     color: green;
+     width: 70px;
+     
+}
+.buttons #prev:hover{
+    cursor: pointer;
+    color: blue;
+}
+.buttons #next:hover{
+    cursor: pointer;
+    color: blue;
+}
+/* Contact  */
+#contact-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f9f9f9; /*to be changed */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+#contact-2 form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#contact-2 h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+#contact-2 form input, #contact-2 form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+#contact-2 form button{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+#contact-2 form button:hover{
+    cursor: pointer;
+    color: green;
+}
